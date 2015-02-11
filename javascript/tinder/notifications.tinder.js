@@ -1,4 +1,4 @@
-var Tinder = window.Tinder || {};
+var Tinder = window.Tinder || new TinderClass();
 
 Tinder.notify = function(title, options) {
   if (!window.Notification) throw new Error("Notification API not supported!");

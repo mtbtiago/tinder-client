@@ -1,4 +1,4 @@
-var Tinder = window.Tinder || {};
+var Tinder = window.Tinder || new TinderClass();
 
 // AJAX Function
 Tinder.ajax = function(url, data, callback) {

@@ -1,4 +1,4 @@
-var Tinder = window.Tinder || {};
+var Tinder = window.Tinder || new TinderClass();
 
 // Geolocate Function
 Tinder.geolocate = function(onSuccess) {

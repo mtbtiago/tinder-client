@@ -45,13 +45,13 @@ function onGetAddress(event) {
 function onSaveData(event) {
   if(!address || !mapURL) alert("You need Geolocation and Address first!");
 
-  $.save("TinderData", { address: address, url: mapURL });
+  StorageSingleton.save("TinderData", { address: address, url: mapURL });
   alert("Data saved correctly.")
 }
 
 // use notification.tinder.js
 function onShowNotification(event) {
-  var data = $.get("TinderData");
+  var data = StorageSingleton.get("TinderData");
 
   if(!data) alert("You need to Save Data first!");
 
