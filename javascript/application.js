@@ -10,15 +10,11 @@ var mapURL;
 var address;
 
 // use query.tinder.js
-var button1 = $.query("#getGeolocation");
-var button2 = $.query("#getAddress");
-var button3 = $.query("#saveData");
-var button4 = $.query("#showNotification");
-
-$.on(button1, "click", onGetGeolocation);
-$.on(button2, "click", onGetAddress);
-$.on(button3, "click", onSaveData);
-$.on(button4, "click", onShowNotification);
+// applying Chaining pattern
+var button1 = $.query("#getGeolocation").on("click", onGetGeolocation);
+var button2 = $.query("#getAddress").on("click", onGetAddress);
+var button3 = $.query("#saveData").on("click", onSaveData);
+var button4 = $.query("#showNotification").on("click", onShowNotification);
 
 // use geolocation.tinder.js
 function onGetGeolocation(event) {

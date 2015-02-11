@@ -1,11 +1,18 @@
-var Tinder = window.Tinder || {};
+// applying Chaining pattern
 
-// Query Selector Function
-Tinder.query = function(selector) {
-  return document.querySelector(selector);
-};
+var TinderClass = function() {
+  this.selector = {};
+}
 
-// Event Listener Function
-Tinder.on = function(element, event, callback) {
-  element.addEventListener(event, callback);
-};
+var Tinder = window.Tinder || new TinderClass();
+
+TinderClass.prototype.query = function(selector) {
+  this.selector = document.querySelector(selector);
+  return this;
+}
+
+TinderClass.prototype.on = function(event, callback) {
+  this.selector.addEventListener(event, callback);
+  return this;
+}
+
