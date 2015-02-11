@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>Tinder.js - HTML5 APIs in Practice</title>
+    <link rel="stylesheet" href="styles/bootstrap.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h3>Tinder.js</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1>HTML5 APIs in Practice</h1>
+        <p class="lead">Tinder.js is a set of javascript files that encapsulate HTML5 API examples. Click the buttons in order and wait to receive the alerts confirming that all worked.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <!-- uses geolocation.tinder.js -->
+          <h3>Geolocation</h3>
+          <p>Retrieves the browser geolocation with the Geolocation API and displays coordinates.</p>
+          <p><button id="getGeolocation" class="btn btn-primary">Get Geolocation</button></p>
+          <script>
+            $ = window.Tinder;
+          </script>
+        </div>
+
+        <div class="col-md-4">
+          <!-- uses ajax.tinder.js -->
+          <h3>AJAX</h3>
+          <p>Uses the XMLHttpRequest API to retrieve and display an address using the Google Maps Static API.</p>
+          <p><button id="getAddress" class="btn btn-primary">Get Address</button></p>
+        </div>
+
+        <div class="col-md-4">
+          <!-- uses storage.tinder.js -->
+          <h3>Local Storage</h3>
+          <p>Saves the coordinates, map and address into local storage as an object, using the LocalStorage API.</p>
+          <p><button id="saveData" class="btn btn-primary">Save Data</button></p>
+        </div>
+
+        <div class="col-md-4">
+          <!-- uses notification.tinder.js -->
+          <h3>Notification</h3>
+          <p>Retrieves the saved data and displays it in a notification using the Notification API with the Google Maps Static API map.</p>
+          <p><button id="showNotification" class="btn btn-primary">Show Notificatoin</button></p>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="javascript/tinder/query.tinder.js"></script>
+    <script src="javascript/tinder/ajax.tinder.js"></script>
+    <script src="javascript/tinder/geolocation.tinder.js"></script>
+    <script src="javascript/tinder/storage.tinder.js"></script>
+    <script src="javascript/tinder/notifications.tinder.js"></script>
+    <script src="javascript/tinder/notifications.tinder.js"></script>
+    <script src="javascript/application.js"></script>
+  </body>
+</html>
